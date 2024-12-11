@@ -41,7 +41,10 @@ figure;
 imshow(noisy_image, []), title('Noisy Image');
 perform_custom_convolution(noisy_image, filter_sizes, 'Noisy Image');
 
-% Part 2 (continued): Linearity test with combined images
+% ------------------------------------------------------------
+% QUESTION 2: Linearity test with combined images
+% ------------------------------------------------------------
+
 image1 = im2double(imread('image1.png'));
 image2 = im2double(imread('image2.png'));
 filter_10 = ones(10, 10) / 100;
@@ -54,7 +57,10 @@ figure;
 subplot(1, 2, 1), imshow(smoothed_combined, []), title('Filtered Combined Image');
 subplot(1, 2, 2), imshow(smoothed_image1 + smoothed_image2, []), title('Sum of Individually Filtered Images');
 
-% Part 3: Detect occurrences of 't' in a text image
+% ------------------------------------------------------------
+% QUESTION 3: Detect occurrences of 't' in a text image
+% ------------------------------------------------------------
+
 text_image = im2double(imread('Text.png'));
 letter_t = im2double(imread('lettert.png'));
 horizontal_text = text_image(1:55, 1:200);
